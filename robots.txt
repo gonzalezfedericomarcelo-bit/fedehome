@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /send_mail.php
+Disallow: /includes/
+Disallow: /assets/video/
+Disallow: /assets/descargas/
+
+Sitemap: https://www.federicogonzalez.net/sitemap.xml
