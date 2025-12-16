@@ -43,9 +43,45 @@ if (!isset($metaDescription)) {
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" id="mainNav">
     <div class="container">
         
-        <a class="navbar-brand fw-bold" href="index.php">
-            <img src="assets/img/logo.png" alt="Logo Digital Canvas" style="height: 50px;">  Fede González
-        </a>
+        <style>
+    /* 1. Tamaño GRANDE para PC */
+    .brand-container { 
+        font-size: 2.2rem; /* Antes era 1.5rem, ahora es mucho más grande */
+    }
+    .brand-icon { 
+        font-size: 2rem; /* Icono proporcional */
+    }
+    .brand-pen { 
+        font-size: 1.4rem; 
+    }
+
+    /* 2. Ajuste para Celulares (Para que no rompa el menú) */
+    @media (max-width: 576px) {
+        .brand-container { font-size: 1.4rem !important; } /* En móvil se achica para entrar */
+        .brand-icon { font-size: 1.5rem !important; }
+        .brand-pen { font-size: 1rem !important; }
+        .navbar-brand { margin-right: 0 !important; }
+    }
+</style>
+
+<a class="navbar-brand fw-bold d-flex align-items-center brand-container" href="index.php" style="font-family: 'Montserrat', sans-serif; letter-spacing: -1px; white-space: nowrap;">
+    
+    <div class="d-flex align-items-center me-3 fw-bold brand-icon" style="font-family: monospace; line-height: 1;">
+        <span class="text-accent-blue">&lt;/</span>
+        <i class="fas fa-pen-nib text-accent-orange mx-1 brand-pen" style="transform: rotate(15deg);"></i>
+        <span class="text-accent-blue">&gt;</span>
+    </div>
+    
+    <span class="text-accent-orange">FEDE</span>
+    <span class="text-accent-blue">GONZÁLEZ</span>
+    <span class="text-accent-orange"></span>
+</a>
+
+
+
+
+
+
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
